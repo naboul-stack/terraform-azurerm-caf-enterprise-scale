@@ -16,7 +16,7 @@ module "test_root_id_2" {
   root_id        = var.root_id_2
   root_name      = "${var.root_name}-2"
 
-  deploy_demo_landing_zones = true
+  deploy_demo_landing_zones = false
 
 }
 
