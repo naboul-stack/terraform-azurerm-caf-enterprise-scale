@@ -1,6 +1,6 @@
 variable "root_id_1" {
   type = string
-  default = "nbmrootid1"
+  default = "klarna"
 }
 
 variable "root_id_2" {
@@ -15,5 +15,5 @@ variable "root_id_3" {
 
 variable "root_name" {
   type = string
-  default = "nbmrootname"
+  default = "Klarna"
 }
