@@ -10,18 +10,11 @@
 
         ],
         "role_definitions": [
-            
+
         ],
         "archetype_config": {
-            "parameters": {
-                "ES-Allowed-Locations": {
-                    "listOfAllowedLocations": [
-                        "eastus",
-                        "eastus2"
-                    ]
-                }
+            "parameters": {}
             },
             "access_control": {}
-        }
     }
 }

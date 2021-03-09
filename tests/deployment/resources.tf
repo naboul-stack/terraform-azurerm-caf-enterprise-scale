@@ -6,8 +6,8 @@ module "test_root_id_1" {
   root_parent_id = data.azurerm_client_config.current.tenant_id
   root_id        = var.root_id_1
   root_name      = var.root_name
-  deploy_core_landing_zones = true                // Control whether to deploy the default core landing zones // default = true
-  deploy_demo_landing_zones = false               // Control whether to deploy the demo landing zones (default = false)
+  # deploy_core_landing_zones = true                // Control whether to deploy the default core landing zones // default = true
+  # deploy_demo_landing_zones = false               // Control whether to deploy the demo landing zones (default = false)
   library_path              = "${path.root}/lib"  // Set a path for the custom archetype library path
 
   custom_landing_zones = {
@@ -22,13 +22,14 @@ module "test_root_id_1" {
                 "systemid": [
                     "c2c"
                   ]
-                }
-        access_control = {}
+              }
+        }
+      access_control = {}
       }
-    }
     }
   }
 }
+
 # module "test_root_id_2" {
 #   source = "../../"
 
