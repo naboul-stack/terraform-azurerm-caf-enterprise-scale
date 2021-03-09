@@ -6,7 +6,34 @@ module "test_root_id_1" {
   root_parent_id = data.azurerm_client_config.current.tenant_id
   root_id        = var.root_id_1
   root_name      = var.root_name
+  deploy_core_landing_zones = true                // Control whether to deploy the default core landing zones // default = true
+  deploy_demo_landing_zones = false               // Control whether to deploy the demo landing zones (default = false)
+  library_path              = "${path.root}/lib"  // Set a path for the custom archetype library path
 
+  custom_landing_zones = {
+    #------------------------------------------------------#
+    # This variable is used to add new Landing Zones using
+    # the Enterprise-scale deployment model.
+    # Simply add new map items containing the required
+    # attributes, and the Enterprise-scale core module will
+    # take care of the rest.
+    # To associated existing Management Groups which have
+    # been imported using "terraform import ...", please ensure
+    # the key matches the id (Name) of the imported Management
+    # Group and ensure all other values match the existing
+    # configuration.
+    #------------------------------------------------------#
+    Klarna = {
+      display_name               = "Klarna"
+      parent_management_group_id = "69e08b40-2dfc-44cd-b3b5-e808212d7e30"
+      subscription_ids           = []
+      archetype_config = {
+        archetype_id = "customer_online"
+        parameters   = {}
+        access_control = {}
+      }
+    }
+  }
 }
 
 # module "test_root_id_2" {

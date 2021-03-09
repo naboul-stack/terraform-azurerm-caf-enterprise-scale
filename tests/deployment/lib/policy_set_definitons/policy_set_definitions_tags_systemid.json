@@ -1,0 +1,68 @@
+{
+    "name": "Klarna-Apply-SystemID-Tag",
+    "type": "Microsoft.Authorization/policySetDefinitions",
+    "apiVersion": "2019-09-01",
+    "properties": {
+     "displayName": "Tags apply SystemID",
+     "policyType": "Custom",
+     "description": "Tags apply SystemID",
+     "metadata": {
+      "category": "Tags",
+      "createdBy": "614cb703-a23d-4a5f-a39c-4576148e12dd",
+      "createdOn": "2021-03-05T11:01:04.8077916Z",
+      "updatedBy": "614cb703-a23d-4a5f-a39c-4576148e12dd",
+      "updatedOn": "2021-03-05T14:44:44.9232858Z"
+     },
+     "parameters": {
+      "SystemID": {
+       "type": "String",
+       "metadata": {
+        "displayName": "SystemID",
+        "description": null
+       }
+      }
+     },
+     "policyDefinitions": [
+      {
+       "policyDefinitionReferenceId": "Add or replace a tag on resources_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5ffd78d9-436d-4b41-a421-5baa819e3008",
+       "parameters": {
+        "tagName": {
+         "value": "SystemID"
+        },
+        "tagValue": {
+         "value": "[parameters('SystemID')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Add or replace a tag on resource groups_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d157c373-a6c4-483d-aaad-570756956268",
+       "parameters": {
+        "tagName": {
+         "value": "SystemID"
+        },
+        "tagValue": {
+         "value": "[parameters('SystemID')]"
+        }
+       },
+       "groupNames": []
+      },
+      {
+       "policyDefinitionReferenceId": "Add or replace a tag on subscriptions_1",
+       "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/61a4d60b-7326-440e-8051-9f94394d4dd1",
+       "parameters": {
+        "tagName": {
+         "value": "SystemID"
+        },
+        "tagValue": {
+         "value": "[parameters('SystemID')]"
+        }
+       },
+       "groupNames": []
+      }
+     ],
+     "policyDefinitionGroups": []
+    }
+   }

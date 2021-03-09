@@ -3,18 +3,21 @@
         "policy_assignments": [
 
         ],
-        "policy_definitions": [],
-        "policy_set_definitions": [],
-        "role_definitions": [],
+        "policy_definitions": [
+
+        ],
+        "policy_set_definitions": [
+
+        ],
+        "role_definitions": [
+            
+        ],
         "archetype_config": {
             "parameters": {
                 "ES-Allowed-Locations": {
                     "listOfAllowedLocations": [
                         "eastus",
-                        "eastus2",
-                        "westus",
-                        "northcentralus",
-                        "southcentralus"
+                        "eastus2"
                     ]
                 }
             },

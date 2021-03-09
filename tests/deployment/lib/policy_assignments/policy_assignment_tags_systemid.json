@@ -1,0 +1,35 @@
+{
+    "name": "Tags-apply-SystemID",
+    "type": "Microsoft.Authorization/policyAssignments",
+    "apiVersion": "2019-09-01",
+    "sku": {
+     "name": "A0",
+     "tier": "Free"
+    },
+    "properties": {
+     "displayName": "Tags apply SystemID",
+     "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/69e08b40-2dfc-44cd-b3b5-e808212d7e30/providers/Microsoft.Authorization/policySetDefinitions/e75c2db48b364f1cb62ccec5",
+     "scope": "/subscriptions/103d578f-d8f2-4922-bbbf-24a08bcc8e40",
+     "notScopes": [],
+     "parameters": {
+      "SystemID": {
+       "value": "c2c"
+      }
+     },
+     "metadata": {
+      "assignedBy": "Nabil BenMeriem",
+      "parameterScopes": {},
+      "createdBy": "614cb703-a23d-4a5f-a39c-4576148e12dd",
+      "createdOn": "2021-03-05T14:51:22.182072Z",
+      "updatedBy": null,
+      "updatedOn": null
+     },
+     "enforcementMode": "Default"
+    },
+    "identity": {
+     "principalId": "06fae5b1-f8e7-416a-b359-604ac805aa57",
+     "tenantId": "69e08b40-2dfc-44cd-b3b5-e808212d7e30",
+     "type": "SystemAssigned"
+    },
+    "location": "eastus"
+   }
