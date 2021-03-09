@@ -5,7 +5,7 @@
 
         ],
         "policy_definitions": [
-
+            "Klarna-Apply-SystemID-Tag"
         ],
         "policy_set_definitions": [
             "Klarna-Apply-SystemID-Tag"
@@ -16,10 +16,9 @@
         ],
         "archetype_config": {
             "parameters": {
-                "ES-Allowed-Locations": {
-                    "listOfAllowedLocations": [
-                        "eastus",
-                        "eastus2"
+                "Tags-apply-SystemID": {
+                    "systemid": [
+                        "c2c"
                     ]
                 }
             },

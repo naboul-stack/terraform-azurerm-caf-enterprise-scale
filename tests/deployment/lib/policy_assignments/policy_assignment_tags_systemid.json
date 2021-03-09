@@ -7,7 +7,7 @@
      "tier": "Free"
     },
     "properties": {
-     "displayName": "Tags apply SystemID",
+     "displayName": "Tags-apply-SystemID",
      "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/69e08b40-2dfc-44cd-b3b5-e808212d7e30/providers/Microsoft.Authorization/policySetDefinitions/e75c2db48b364f1cb62ccec5",
      "scope": "/subscriptions/103d578f-d8f2-4922-bbbf-24a08bcc8e40",
      "notScopes": [],

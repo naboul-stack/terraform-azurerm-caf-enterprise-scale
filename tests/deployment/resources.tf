@@ -11,31 +11,24 @@ module "test_root_id_1" {
   library_path              = "${path.root}/lib"  // Set a path for the custom archetype library path
 
   custom_landing_zones = {
-    #------------------------------------------------------#
-    # This variable is used to add new Landing Zones using
-    # the Enterprise-scale deployment model.
-    # Simply add new map items containing the required
-    # attributes, and the Enterprise-scale core module will
-    # take care of the rest.
-    # To associated existing Management Groups which have
-    # been imported using "terraform import ...", please ensure
-    # the key matches the id (Name) of the imported Management
-    # Group and ensure all other values match the existing
-    # configuration.
-    #------------------------------------------------------#
-    Klarna = {
+    "${var.root_id_1}" = {
       display_name               = "Klarna"
       parent_management_group_id = "69e08b40-2dfc-44cd-b3b5-e808212d7e30"
       subscription_ids           = []
       archetype_config = {
-        archetype_id = "customer_online"
-        parameters   = {}
+        archetype_id = "customer_root"
+        parameters   = {
+              "Tags-apply-SystemID": {
+                "systemid": [
+                    "c2c"
+                  ]
+                }
         access_control = {}
       }
     }
+    }
   }
 }
-
 # module "test_root_id_2" {
 #   source = "../../"
 

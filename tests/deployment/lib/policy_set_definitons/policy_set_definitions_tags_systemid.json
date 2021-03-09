@@ -3,9 +3,9 @@
     "type": "Microsoft.Authorization/policySetDefinitions",
     "apiVersion": "2019-09-01",
     "properties": {
-     "displayName": "Tags apply SystemID",
+     "displayName": "Tags-apply-SystemID",
      "policyType": "Custom",
-     "description": "Tags apply SystemID",
+     "description": "Tags-apply-SystemID",
      "metadata": {
       "category": "Tags",
       "createdBy": "614cb703-a23d-4a5f-a39c-4576148e12dd",
